@@ -25,3 +25,9 @@ export const Btn = styled.button`
   color: #ffff;
   margin-top: 10px;
 `;
+
+export const Err = styled.div`
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+`;

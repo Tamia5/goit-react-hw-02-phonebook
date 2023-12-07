@@ -1,8 +1,8 @@
 // import { Formik, Field, Form } from 'formik';
 import React, { Component } from 'react';
-import { Formik, Field } from 'formik';
+import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { Container, Label, Btn } from './ContactForm.styled';
+import { Container, Label, Btn, Err } from './ContactForm.styled';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string()
@@ -28,9 +28,11 @@ const ContacForm = ({ addCont }) => {
       <Container>
         <Label htmlFor="name">Name</Label>
         <Field type="text" name="name" />
+        <ErrorMessage name="name" component={Err} />
 
         <Label htmlFor="number">Number</Label>
         <Field type="tel" name="number" />
+        <ErrorMessage name="number" component={Err} />
 
         <Btn type="submit">Add contact</Btn>
       </Container>

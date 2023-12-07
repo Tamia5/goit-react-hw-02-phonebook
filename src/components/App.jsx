@@ -18,6 +18,7 @@ class App extends Component {
 
   addContact = ({ name, number }) => {
     const { contacts } = this.state;
+
     const isNameExists = contacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
